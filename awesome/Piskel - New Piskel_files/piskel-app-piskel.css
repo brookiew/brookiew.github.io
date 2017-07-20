@@ -1,0 +1,207 @@
+.piskel-container {
+	padding: 40px 0 0 40px;
+}
+
+.piskel-meta {
+	margin-bottom : 20px;
+}
+
+.piskel-name {
+	display:inline-block;
+	margin-right:10px;
+	color:#FAFAFA;
+}
+
+.piskel-description {
+	color : #FAFAFA;
+}
+
+.piskel-meta-title {
+	font-size: 1.2em;
+	margin: 5px 0 10px 0;
+	font-weight: normal;
+	color: #FAFAFA;
+}
+
+.piskel-meta-title::after{
+	display: block;
+	border-bottom: 1px solid #4a4a4a;
+	border-top: 1px solid #666;
+	content: "";
+	margin-top: 5px;
+}
+
+.piskel-privacy,
+.piskel-history {
+	color : #FAFAFA;
+	font-weight: bold;
+}
+
+.piskel-info-container {
+	overflow: hidden;
+	box-sizing : border-box;
+}
+
+.piskel-preview-container {
+	width:512px;
+	float:left;
+	margin-right : 40px;
+	position:relative;
+	overflow: inherit;
+}
+
+.piskel-preview-container::before {
+	border-radius: 0;
+	box-shadow:inset 0 0 6px 0 rgba(0,0,0,0.7);
+}
+
+.piskel-details-actions {
+	font-size: 0;
+}
+
+.piskel-details-actions .piskel-button {
+	margin-right: 5px;
+}
+
+/********************************/
+/*****@MEDIA-QUERY : PORTRAIT****/
+/********************************/
+@media (orientation:portrait) {
+	.piskel-container {
+		position: relative;
+		left: 50%;
+		width: 512px;
+		margin-left: -256px;
+		padding-left:0;
+	}
+
+	.piskel-info-container {
+		position: relative;
+		width: 512px;
+	}
+}
+
+.piskel-owner {
+	margin: -5px 5px 0 5px;
+	vertical-align: middle;
+	border: 2px solid gold;
+	transition : border-color 0.3s;
+}
+
+.piskel-owner:hover {
+	border-color : #FAFAFA;
+}
+
+.piskel-preview-container canvas,
+.piskel-preview-container img,
+.piskel-error-image-container img {
+	z-index : 50;
+	position: relative;
+	display: block;
+}
+
+.piskel-error-container {
+	width: 512px;
+	left: 50%;
+	position: relative;
+	margin-left: -256px;
+}
+
+.piskel-error-title {
+	font-size: 7em;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.piskel-error-details {
+	color: white;
+	font-size: 3em;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.piskel-error-image-container {
+	position:absolute;
+	left: 50%;
+}
+
+@media (max-height: 900px) {
+	.piskel-error-container {
+		width: 512px;
+		padding: 20px;
+		box-sizing: border-box;
+		right: 50%;
+		left :auto;
+		position: absolute;
+		margin-left: 0;
+	}
+
+	.piskel-error-image-container {
+		position:absolute;
+		left: 50%;
+		margin-left: 0 !important;
+	}
+}
+.piskel-edit {
+	box-sizing : border-box;
+
+	position: absolute;
+	overflow: hidden;
+
+	left: 0;
+	top: 0;
+	width : 512px;
+	height: 512px;
+	padding : 20px;
+
+	background: #2d2d2d;
+
+	transition: left 0.3s;
+}
+
+.piskel-edit.show {
+	left: 512px;
+}
+
+.piskel-edit>div {
+	margin-bottom: 10px;
+}
+
+.piskel-edit label{
+	vertical-align: top;
+	width : 120px;
+	display:inline-block;
+}
+
+.piskel-edit input[type="text"], textarea {
+	box-sizing: border-box;
+	background: #F2F2F2;
+	color: #2d2d2d;
+	border: 1px solid #111;
+	border-radius: 3px;
+	font-family: inherit;
+}
+
+.piskel-edit input[type="text"]{
+	width: 347px;
+	height: 30px;
+	padding: 0 5px;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.piskel-edit textarea{
+	width: 347px;
+	padding: 5px;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+.piskel-edit .piskel-button {
+	width: 100px;
+	margin-left: 10px;
+}
+
+.piskel-edit-actions {
+	text-align: right;
+}
